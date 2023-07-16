@@ -12,7 +12,7 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.logo}>
         <Link to={ROUTES.HOME}>
-          <img src={LOGO} alt="logo img" />
+          <img src={LOGO} alt="header logo img" />
         </Link>
       </div>
 
@@ -38,7 +38,25 @@ const Header = () => {
                 value=""
             />
           </div>
+
+          {true && <div className={styles.box}></div>}
         </form>
+
+        <div className={styles.account}>
+          <Link className={styles.favourites} to={ROUTES.HOME}>
+            <svg className={styles["icon-fav"]}>
+              <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#heart`} />
+            </svg>
+          </Link>
+
+          <Link className={styles.cart} to={ROUTES.CART}>
+            <svg className={styles["icon-cart"]}>
+              <use xlinkHref={`${process.env.PUBLIC_URL}/sprite.svg#bag`} />
+            </svg>
+
+            <span className={styles.count}>2  </span>
+          </Link>
+        </div>
       </div>
     </div>
   );
