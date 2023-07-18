@@ -14,11 +14,15 @@ const Sidebar = () => {
 
       <nav>
         <ul className={styles.menu}>
-          <li>
-            <NavLink to={`/categories/${1}`}>
-              Link
-            </NavLink>
-          </li>
+          {list.map(({ id, name }) => (
+            <li key={id}>
+              <NavLink to={`/categories/${id}`}
+                  className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+              >
+                {name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
 
