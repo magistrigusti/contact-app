@@ -14,6 +14,7 @@ const App = () => {
   useEffect(() => {
     dispatch(getCategories());
     dispatch(getProducts());
+    console.log(getProducts)
   }, [dispatch])
   return (
     <div className="app">

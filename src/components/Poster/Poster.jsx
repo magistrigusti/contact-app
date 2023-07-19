@@ -15,7 +15,7 @@ const Poster = () => (
       </div>
 
       <div className={styles.image}>
-        <img src={BG} alt="background image" />
+        <img src={BG} alt="" />
       </div>
     </div>
   </section>

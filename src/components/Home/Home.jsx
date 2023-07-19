@@ -5,7 +5,7 @@ import Poster from '../Poster/Poster';
 import Products from '../Products/Products';
 
 const Home = () => {
-  const  list  = useSelector(({ products }) => products);
+  const  {list}  = useSelector(({ products }) => products);
 
   return (
     <>
